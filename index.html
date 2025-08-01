@@ -1,37 +1,29 @@
----
-layout: default
-title: Blog
----
-<div class="posts">
-  {% for post in site.posts %}
-  <div class="index-post">
-    <span class="post-date">
-      <a href="{{ site.baseurl }}timeline" class="timeline">
-        {{ post.date | date_to_string }}
-      </a>
-    </span>
+<!-- sumith1896.github.io/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Redirecting…</title>
 
-    <h2 class="post-title">
-      <a href="{{ post.url }}">
-        {{ post.title }}
-      </a>
-    </h2>
+  <!-- 0-second client-side redirect -->
+  <meta http-equiv="refresh"
+        content="0; url=https://cs.stanford.edu/~sumith/">
 
-    <span class="post-tag">
-      {% for tag in post.tags %}
-        {% if tag == post.tags.last %}
-          <a href="{{ site.baseurl }}tags/#{{tag}}">
-            {{ tag }}
-          </a>
+  <!-- Helps search engines understand the canonical URL -->
+  <link rel="canonical" href="https://cs.stanford.edu/~sumith/" />
+  <script>
+    /* Extra safety for browsers that ignore the meta tag */
+    window.location.replace("https://cs.stanford.edu/~sumith/");
+  </script>
 
-        {% else %}
-          <a href="{{ site.baseurl }}tags/#{{tag}}">
-            {{ tag }}
-          </a>
-          &middot;
-        {% endif %}
-      {% endfor %}
-    </span>
-  </div>
-  {% endfor %}
-</div>
+  <style>
+    body { font-family: system-ui, sans-serif; padding: 2rem; }
+  </style>
+</head>
+<body>
+  <h1>Redirecting…</h1>
+  <p>If you aren’t taken there automatically,
+     <a href="https://cs.stanford.edu/~sumith/">click this link</a>.</p>
+</body>
+</html>
+
